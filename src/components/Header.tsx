@@ -26,7 +26,7 @@ const Header = () => {
 
         <div className="flex items-center gap-4">
           <a
-            href="https://github.com/BenedictaUche/tabler"
+            href="https://github.com/BenedictaUche/tabler-saga"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -117,7 +117,7 @@ const Header = () => {
           <div className="flex justify-center gap-4 items-center">
           <Bell size={32} className="text-gray-600" />
           <a
-            href="https://github.com/BenedictaUche/tabler"
+            href="https://github.com/BenedictaUche/tabler-saga"
             target="_blank"
             rel="noopener noreferrer"
 
