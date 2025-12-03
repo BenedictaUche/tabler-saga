@@ -60,26 +60,26 @@ const DevelopmentActivity = ({ activity, onDeleteActivityItem }: DevelopmentActi
       </div>
 
       {/* Table */}
-      <div className="border-t border-gray-200 shrink-0">
-        <table className="min-w-full divide-y divide-gray-200">
-          <thead>
+      <div className="border-t border-gray-200 shrink-0 overflow-x-auto">
+        <table className="min-w-full divide-y divide-gray-200 text-xs sm:text-sm">
+          <thead className="bg-gray-50">
             <tr>
-              <th className="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
+              <th className="px-3 sm:px-4 py-3 text-left font-medium text-gray-700 uppercase tracking-wider">
                 User
               </th>
-              <th className="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
+              <th className="px-3 sm:px-4 py-3 text-left font-medium text-gray-700 uppercase tracking-wider">
                 Commit
               </th>
-              <th className="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
+              <th className="px-3 sm:px-4 py-3 text-left font-medium text-gray-700 uppercase tracking-wider">
                 Date
               </th>
-              <th className="px-4 py-3"></th>
+              <th className="px-3 sm:px-4 py-3"></th>
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
             {displayActivity.map((item, index) => (
               <tr key={index}>
-                <td className="px-4 py-3 whitespace-nowrap">
+                <td className="px-3 sm:px-4 py-3 whitespace-nowrap">
                   <div className="flex items-center gap-3">
                     <img
                       src={item.imageUrl}
@@ -89,13 +89,13 @@ const DevelopmentActivity = ({ activity, onDeleteActivityItem }: DevelopmentActi
                     <span className="text-sm font-medium text-gray-900">{item.user}</span>
                   </div>
                 </td>
-                <td className="px-4 py-3 whitespace-nowrap text-sm text-gray-600">
+                <td className="px-3 sm:px-4 py-3 whitespace-normal sm:whitespace-nowrap text-gray-600">
                   {item.commit}
                 </td>
-                <td className="px-4 py-3 whitespace-nowrap text-sm text-gray-600">
+                <td className="px-3 sm:px-4 py-3 whitespace-nowrap text-gray-600">
                   {item.date}
                 </td>
-                <td className="px-4 py-3 whitespace-nowrap text-right text-sm">
+                <td className="px-3 sm:px-4 py-3 whitespace-nowrap text-right">
                   <button
                     className="text-gray-400 hover:text-gray-600 transition-colors"
                     onClick={() => item.id && onDeleteActivityItem?.(item.id)}
